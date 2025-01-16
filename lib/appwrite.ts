@@ -1,6 +1,6 @@
-import { Platform } from "react-native";
 import {Account, Avatars, Client, OAuthProvider} from "react-native-appwrite"
 import * as Linking from "expo-linking"
+import {openAuthSessionAsync} from "expo-web-browser"
 export const config = {
     platform : "com.restate",
     endpoint : process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
@@ -30,7 +30,7 @@ export async function login(){
         const browserResult = await openAuthSessionAsync(
             response.toString(),
             redirectUri
-        )
+        );
 
         if(browserResult.type !== 'success') throw new Error ("Failed to login")
             const url = new URL(browserResult.url);
@@ -59,7 +59,7 @@ export async function logout(){
     }
 }
 
-export async function getUser(){
+export async function getCurrentUser(){
     try {
         const response = await account.get();
 
@@ -70,7 +70,7 @@ export async function getUser(){
 
         return {
             ...response,
-            avatar: userAvatar.toString(),
+            avatar: userAvatar.toString()
         }
     }
     } catch (error) {
