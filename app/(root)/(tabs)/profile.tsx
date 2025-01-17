@@ -75,17 +75,17 @@ const Profile = () => {
             source={{uri: user?.avatar}}
             className='size-44 relative rounded-full'
             />
-            <TouchableOpacity className='absolute bottom-11 right-2'>
+            <TouchableOpacity className=' relative bottom-11 left-16'>
               <Image
               source={icons.edit}
               className='size-9'
               />
             </TouchableOpacity>
-            <Text className='text-2xl font-rubik-bold mt-2'>Shahbaz Khan</Text>
+            <Text className='text-2xl font-rubik-bold bottom-6'>{user?.name}</Text>
           </View>
         </View>
 
-        <View className='flex flex-col mt-10'>
+        <View className='flex flex-col mt-5'>
           <SettingsItem
             icon={icons.calendar}
             title='Edit Profile'

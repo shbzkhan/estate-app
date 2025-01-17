@@ -4,6 +4,8 @@ import "./global.css";
 import {useFonts} from "expo-font"
 import { useEffect } from "react";
 import GlobalProvider from "@/lib/global-provider";
+import { StatusBar } from "expo-status-bar";
+
 
 export default function RootLayout() {
 
@@ -26,6 +28,7 @@ export default function RootLayout() {
   
   return (
     <GlobalProvider>
+      <StatusBar style="dark" />
     <Stack screenOptions={{headerShown: false}} />;
     </GlobalProvider>
   )
