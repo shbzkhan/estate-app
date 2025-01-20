@@ -5,7 +5,6 @@ import images from '@/constants/images'
 import icons from '@/constants/icons'
 import { login } from '@/lib/appwrite'
 import { useGlobalContext } from '@/lib/global-provider'
-import { replace } from 'expo-router/build/global-state/routing'
 import { Redirect } from 'expo-router'
 
 const SignIn = () => {
@@ -49,7 +48,9 @@ const SignIn = () => {
             />
             <Text
             className='text-lg font-rubik-medium text-black-300 ml-2'
-            >Continue with Google</Text>
+            >
+              Continue with Google
+              </Text>
 
             </View>
           </TouchableOpacity>
