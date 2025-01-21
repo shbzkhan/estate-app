@@ -56,7 +56,7 @@ export const Card = ({item:{image, rating, name, address, price}, onPress}: Prop
             source={icons.star}
             className='size-2.5'
             />
-            <Text className='text-xs font-rubik-bold text-primary-300 ml-0.5'>4.4</Text>
+            <Text className='text-xs font-rubik-bold text-primary-300 ml-0.5'>{rating}</Text>
         </View>
 
         <Image

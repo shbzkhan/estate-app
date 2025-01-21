@@ -107,7 +107,7 @@ export async function getProperties({filter, query, limit}:{
     try {
         const buildQuery = [Query.orderDesc("$createdAt")]
         if(filter && filter !== "All") {
-            buildQuery.push(Query.equal("type", filter))
+            buildQuery.push(Query.equal("type", filter));
         }
 
         if(query){
