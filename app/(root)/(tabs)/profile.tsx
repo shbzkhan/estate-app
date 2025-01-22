@@ -100,7 +100,8 @@ const Profile = () => {
             {
               settings.slice(2).map((item, index)=>(
                 <SettingsItem
-                key={index} {...item}
+                key = {index}
+                {...item}
                 />
               )
             )}
